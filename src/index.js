@@ -12,10 +12,9 @@ const client = new Client({
 });
 
 client.on(Events.MessageCreate, async (msg) => {
-  msg.channel.name
-  console.log("🚀 ~ file: index.js:16 ~ client.on ~ msg.channel.name", msg.channel.name)
-  
-  await msg.react(client.emojis.cache.find((emoji) => emoji.name == 'ponsone'));
+  if (msg.channel.name === 'geral') {
+    await msg.react(client.emojis.cache.find((emoji) => emoji.name == 'ponsone'));
+  }
 });
 
 client.login(process.env.TOKEN);
