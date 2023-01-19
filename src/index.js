@@ -3,6 +3,7 @@ const {
   Events,
   GatewayIntentBits: { Guilds, GuildMessages, GuildMessageReactions },
 } = require('discord.js');
+
 const dotenv = require('dotenv');
 
 dotenv.config();
